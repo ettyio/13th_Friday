@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: base_character_png_0
+      name: base_cha
       rect:
         serializedVersion: 2
         x: 0
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      base_character_png_0: -5029896975279993262
+      base_cha: -5029896975279993262
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

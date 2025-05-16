@@ -2367,7 +2367,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.35686275, g: 0.5803922, b: 0.9882353, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2417,12 +2417,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 180.15, y: -2.45, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.59521484, y: 1.0083863, z: -7.1001368}
+  m_LocalScale: {x: 1, y: 1.0018033, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1212587527}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -9225,6 +9225,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5823200122092989812, guid: 9b53eb8cedc424ba19be22c94e45c974, type: 3}
   m_PrefabInstance: {fileID: 5823200123028222835}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1212587527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5823200122092989814, guid: 9b53eb8cedc424ba19be22c94e45c974, type: 3}
+  m_PrefabInstance: {fileID: 5823200123028222835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1213357719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10239,14 +10244,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5823200122092989814, guid: 9b53eb8cedc424ba19be22c94e45c974, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 519420032}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b53eb8cedc424ba19be22c94e45c974, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
   - {fileID: 5823200123028222835}
   - {fileID: 311570780}
   - {fileID: 1819509508}

@@ -16,7 +16,8 @@ namespace NoSuchCompany.Games.SuperMario.Services
     {
         ICollisions Collisions { get; }
 
-        void Initialize(BoxCollider2D boxCollider2D, int rayCounts);
+        const int DefaultRayCount = 3;  // 예시: 기본값 3
+        void Initialize(Collider2D collider2D, int rayCounts = DefaultRayCount);
 
         IEnumerable<IRaycastCollision> FindVerticalHitsOnly(Vector2 objectVelocity, LayerMask collisionMask, float? fixedRayLength = null);
 

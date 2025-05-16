@@ -157,7 +157,7 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
         
         private bool IsPlayerReady()
         {
-            _player = FindObjectOfType<PlayerBehavior>();
+            _player = FindFirstObjectByType<PlayerBehavior>();
 
             if (_player == null)
                 return false;

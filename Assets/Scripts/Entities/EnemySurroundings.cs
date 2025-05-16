@@ -38,7 +38,8 @@ namespace NoSuchCompany.Games.SuperMario.Entities
 
         public static EnemySurroundings Get(IEnemy enemy)
         {
-            var player = Object.FindObjectOfType<PlayerBehavior>();
+            var player = Object.FindFirstObjectByType<PlayerBehavior>();
+
 
             return new EnemySurroundings(enemy, player);
         }

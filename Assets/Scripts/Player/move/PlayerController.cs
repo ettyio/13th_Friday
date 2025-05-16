@@ -32,12 +32,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             moveX = -1f;
-            if (facingRight) Flip();
+            if (!facingRight) Flip();
         }
         else if (Input.GetKey(KeyCode.D))
         {
             moveX = 1f;
-            if (!facingRight) Flip();
+            if (facingRight) Flip();
         }
 
         // 이동 적용

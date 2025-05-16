@@ -1,55 +1,104 @@
-The repository contains a version of Super Mario made in Unity.
+# SUPERHUFS  
 
-The goal of this repository is for me to learn Unity while tweaking the first video game I ever played.
+Unity로 개발된 2D 횡스크롤 액션 게임입니다.  
+클래식한 슈퍼마리오 스타일의 게임플레이를 기반으로 하며,
+배경은 한국외국어대학교 글로벌캠퍼스,
+플레이어는 컴퓨터공학부 학생입니다.
 
-A lot of the algorithms are coming from the following tutorials:
+각 스테이지를 통과하여 교수님을 구출하고,
+최종 보스인 AI를 물리쳐 세계를 구하는 것이 목표입니다.
 
-[Sebastian Lague's Creating a 2D platformer series (EN)](https://www.youtube.com/watch?v=MbWK8bCAU2w&list=PLFt_AvWsXl0f0hqURlhyIoAabKPgRsqjz&index=1)
+---
 
-[TUTO UNITY FR's Créer un jeu en 2D facilement avec Unity series (FR)](https://www.youtube.com/watch?v=Y3-iYIs16TI&list=PLUWxWDlz8PYKnrd27LTqOxL2lr3KhEVRT)
+## 게임 개요
 
-## Player
+- 제목: SUPERHUFS
+- 엔진: Unity 6000.0.47f1
+- 장르: 2D 횡스크롤 액션 / 판타지 어드벤처
+- 플레이어: 컴퓨터공학부 학생
+- 목표: 교수님들을 구출하고 AI 보스를 처치해 세계를 구하라!
 
-### Jump
+---
 
-I used Sebastian's raycast approach to detect obstacles. 
+## 스토리
 
-#### Cooldown
+오늘도 평화롭게 밤샘 과제를 하고 집으로 돌아가던 우리의 주인공 플레이어.
+그러나 갑작스럽게 트럭에 치이고, 이세계로 전이된다?
+그곳에서 만난 이세계의 신은 플레이어에게 세계를 구해달라 간청한다.
 
-When jumping, I realized there was a problem if Mario was hitting walls. Mario would get extra jump mid-air.
+- 퀘스트 수락: 두근두근 신나는 모험 시작!
+- 퀘스트 거절: "그렇게 세계는 멸망했다" (배드엔딩)
 
-I have implemented a basic cooldown system. As soon as the player jumps and gets off the ground, the [JumpCooldown](Assets/Scripts/Services/Jumps/JumpCooldown.cs) class activates the cooldown. As soon as the player 'hits' ground, it counts the number of frames during which the player is not allowed to jump.
+---
 
-![Jump cooldown](Documentation/JumpCooldown.gif)
+## 게임 스테이지
 
+### 🎒 Stage 1
 
-## Enemies
+- 배경: 백년관
+- NPC: 이 교수님
+- 목표: 스테이지를 클리어하여 이 교수님을 구출하라
 
-I was curious to know how the game would feel if the enemies were a bit more smarter and actually would try to *get* you.
+---
 
-### Goombas
+### 🧪 Stage 2
 
-#### Death
+- 배경: 공학관
+- NPC: 전 교수님
+- 목표: 스테이지를 클리어하여 전 교수님을 구출하라
 
-Goombas can be killed if the player touches them from above.
+---
 
-![Goombas death](Documentation/Enemy_Death.gif)
+### 🧠 Stage 3
 
-#### Strategies
+- 배경: 교양관
+- 보스: AI
+- 목표: 최종 보스 AI를 무찌르고 세계를 구하라
 
-Goombas have different strategies to attack the player. 
+---
 
-By default, they will not move until the player reaches a certain distance. And when the player gets too close, Goombas will pursue the player until the enemy catches the player or the player is too far away.
+## 🎉 엔딩
 
-To throw the player off a bit, Goombas can do jump scares if the player is really close.
+AI를 무찌르고 난 뒤, 붉게 물들었던 하늘은 다시 파랗게 되돌아오며 모든 이들이 기쁨에 환호한다.  
+세계는 구원받았고, 플레이어는 영웅으로 칭송받는다.
 
-![Goombas basic attack](Documentation/Enemy_JumpScare.gif)
+- THE END -
 
-Goombas have the ability to jump over an obstacle if it prevents them from pursuing the player. 
+---
 
-![Goombas avoids obstacle](Documentation/Enemy_JumpOverObstacle.gif)
+## 주요 기능
 
+- ✅ 슈퍼마리오 스타일의 점프 및 이동 시스템
+- ✅ 각기 다른 테마의 학교 스테이지 (백년관, 공학관, 교양관)
+- ✅ 다양한 장애물과 적 캐릭터
+- ✅ 중간 보스 및 최종 보스전 구현
+- ✅ 교수님을 구출하는 장면
+- ✅ Unity 기반 2D 플랫폼 게임
 
-## Platforms
+---
 
-![Moving platform](Documentation/Platforms_1.gif)
+## 인게임 장면
+
+(이미지 삽입 예정)
+
+---
+
+## 개발 환경
+
+- 엔진: Unity 6000.0.47f1
+- 언어: C#
+- 플랫폼: PC (Windows)
+- 버전관리: Git, Github
+
+---
+
+## 실행 방법
+
+1. Unity Hub에서 프로젝트 열기
+2. 
+3. 
+
+---
+
+## 프로젝트 구조
+

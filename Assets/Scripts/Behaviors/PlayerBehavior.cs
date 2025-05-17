@@ -36,7 +36,9 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
         private Vector3 _velocity;
         private float _smoothedVelocityX;
         private bool _isDead;
-        
+        private int _health = 404;
+        private float _deathYThreshold = -10f;
+
         //  Unity properties;
         public Animator animator;
         public SpriteRenderer spriteRenderer;
@@ -55,19 +57,50 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
             _characterBehavior = GetComponent<CharacterBehavior>();
             _jumpController.Initialize(_characterBehavior);
         }
-        
+
         public void Update()
         {
+            if (_isDead)
+                return;
+
             _jumpController.Update(ref _velocity);
-            
+
             if (IsAttacked())
-                DieAsync().FireAndForget();
+            {
+                TakeDamage(100); //적에게 맞으면 체력 100만큼 감소
+            }
+
+            CheckFallDeath();    //위치 기반 사망 확인
+            CheckHealthDeath();  //체력 기반 사망 확인
 
             MovePlayer();
-            
             _jumpController.PostUpdate();
-
             UpdateAnimations();
+        }
+
+        private void CheckFallDeath()
+        {
+            if (transform.position.y < _deathYThreshold)
+            {
+                DieAsync().FireAndForget();
+            }
+        }
+
+        private void CheckHealthDeath()
+        {
+            if (_health <= 0)
+            {
+                DieAsync().FireAndForget();
+            }
+        }
+
+        public void TakeDamage(int damage)
+        {
+            if (_isDead)
+                return;
+
+            _health -= damage;
+            Debug.Log($"플레이어 피격! 현재 체력: {_health}");
         }
 
         public void OnEnemyAttacked()

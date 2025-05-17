@@ -28,7 +28,7 @@ namespace NoSuchCompany.Games.SuperMario.Services.Jumping
         private readonly float _gravity;
         private readonly float _maximumJumpVelocity;
         private readonly float _minimumJumpVelocity;
-        private const float MaximumJumpHeight = 4.0f;
+        private const float MaximumJumpHeight = 5.0f;
         private const float MinimumJumpHeight = 1f;
         private const float TimeToJumpApex = 0.36f;
 

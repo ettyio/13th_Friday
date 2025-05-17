@@ -92,7 +92,7 @@ public class PlayerHealth : MonoBehaviour
         // 키를 누르면 테스트로 체력 깎기
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            TakeDamage(40); // 스페이스바 누르면 40만큼 데미지
+            TakeDamage(40); // 엔터키 누르면 40만큼 데미지
         }
     }
 }

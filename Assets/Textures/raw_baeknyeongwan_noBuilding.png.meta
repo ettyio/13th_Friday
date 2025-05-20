@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      raw_baeknyeongwan_noBuilding_0: 8111270213818355918
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

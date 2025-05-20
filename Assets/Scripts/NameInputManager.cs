@@ -20,4 +20,10 @@ public class NameInputManager : MonoBehaviour
             Debug.Log("이름을 입력하세요.");
         }
     }
+
+    public void OnSubmitName()
+    {
+        NameManager.playerName = nameInputField.text;
+        SceneManager.LoadScene("STAGE1");
+    }
 }

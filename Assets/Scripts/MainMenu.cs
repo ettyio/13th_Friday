@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("STAGE1"); // 본 게임 씬 이름
+        SceneManager.LoadScene("NameInputScene"); // 본 게임 씬 이름
     }
 
     public void ShowEditorspage()

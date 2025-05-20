@@ -13,7 +13,7 @@ public class NameInputManager : MonoBehaviour
         if (!string.IsNullOrEmpty(playerName))
         {
             PlayerPrefs.SetString("PlayerName", playerName);
-            SceneManager.LoadScene("PrologueScene"); // ¥Ÿ¿Ω æ¿ ¿Ã∏ß
+            SceneManager.LoadScene("STAGE1"); // ¥Ÿ¿Ω æ¿ ¿Ã∏ß
         }
         else
         {

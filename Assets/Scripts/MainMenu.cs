@@ -5,9 +5,11 @@ using System.Collections.Generic;
 
 public class MainMenu : MonoBehaviour
 {
+    public string boss_room;
+
     public void StartGame()
     {
-        SceneManager.LoadScene("boss_room"); // 본 게임 씬 이름
+        SceneManager.LoadScene("STAGE1"); // 본 게임 씬 이름
     }
 
     public void ShowEditorspage()

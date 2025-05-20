@@ -16,6 +16,8 @@ using NoSuchCompany.Games.SuperMario.Services;
 using NoSuchCompany.Games.SuperMario.Services.Impl;
 using NoSuchCompany.Games.SuperMario.Services.Jumping;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace NoSuchCompany.Games.SuperMario.Behaviors
 {
@@ -91,6 +93,7 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
             if (_health <= 0)
             {
                 DieAsync().FireAndForget();
+                EndGame();
             }
         }
 
@@ -158,6 +161,18 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
                 _characterBehavior.Collisions.LeftCollisions.Any(tag => string.Equals(tag, Tags.Enemy))
                 || _characterBehavior.Collisions.RightCollisions.Any(tag => string.Equals(tag, Tags.Enemy))
                 || _characterBehavior.Collisions.AboveCollisions.Any(tag => string.Equals(tag, Tags.Enemy));
+        }
+
+        private void EndGame()
+        {
+            // 3√  µÙ∑π¿Ã
+            StartCoroutine(EndGameWithDelay(3f));
+        }
+
+        private IEnumerator EndGameWithDelay(float delaySeconds)
+        {
+            yield return new WaitForSeconds(delaySeconds);
+            SceneManager.LoadScene("GameOver_died");
         }
     }
 }

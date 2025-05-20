@@ -9,14 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Scene.unity
     guid: 6187886b6786cf747878e77f530be9fc
   - enabled: 1
-    path: Assets/Scenes/Explain Key Scene.unity
-    guid: fe7e0eb7f8e026646809c56d936880c8
-  - enabled: 1
-    path: Assets/Scenes/Editors Scene.unity
-    guid: 7dea2b223030c034ab9944cc862c5f96
-  - enabled: 1
     path: Assets/Scenes/NameInputScene.unity
     guid: 8b49653765b5a7343b9aa728f46af70c
+  - enabled: 1
+    path: Assets/Scenes/Explain Key Scene.unity
+    guid: fe7e0eb7f8e026646809c56d936880c8
   - enabled: 1
     path: Assets/Scenes/STAGE1.unity
     guid: baddd9f64213d46c6bcd54a6f6ce9080
@@ -26,6 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/boss_room.unity
     guid: 24c303eb3116ed84d9e28fef00c47dad
+  - enabled: 1
+    path: Assets/Scenes/Editors Scene.unity
+    guid: 7dea2b223030c034ab9944cc862c5f96
+  - enabled: 1
+    path: Assets/Scenes/TimeOver.unity
+    guid: 91f392daed6b9954f915da19c32d8ccf
+  - enabled: 1
+    path: Assets/Scenes/GameOver_died.unity
+    guid: de450a676c0189246ab3fcc247cdbeff
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 10208f2251fa041ee9da6a186f569648, type: 2}
   m_UseUCBPForAssetBundles: 0

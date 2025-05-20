@@ -37,7 +37,7 @@ namespace NoSuchCompany.Games.SuperMario
                 timeOffset
             );
 
-            transform.position = new Vector3(Math.Max(Configurations.MinimumLeftPositionForCamera, result.x), transform.position.y, transform.position.z);
+            transform.position = result;
         }
     }
 

@@ -85,6 +85,7 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
             if (transform.position.y < _deathYThreshold)
             {
                 DieAsync().FireAndForget();
+                EndGame();
             }
         }
 
@@ -165,8 +166,8 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
 
         private void EndGame()
         {
-            // 3ÃÊ µô·¹ÀÌ
-            StartCoroutine(EndGameWithDelay(3f));
+            // 2ÃÊ µô·¹ÀÌ
+            StartCoroutine(EndGameWithDelay(2f));
         }
 
         private IEnumerator EndGameWithDelay(float delaySeconds)

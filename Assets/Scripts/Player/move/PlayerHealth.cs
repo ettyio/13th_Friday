@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI; // UI 사용을 위해 추가
 using System.Collections;
@@ -63,6 +64,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDead) return;
 
+        SceneManager.LoadScene("gameover"); // GameOver 씬으로 전환
         isDead = true;
         Debug.Log("플레이어 사망");
         // TODO: 게임 오버 처리

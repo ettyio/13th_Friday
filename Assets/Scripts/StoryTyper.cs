@@ -19,6 +19,14 @@ public class StoryTyper : MonoBehaviour
     private void Start()
     {
         skipButton.onClick.AddListener(SkipStory);
+
+        // 이름 불러오기 & 삽입
+        string playerName = PlayerPrefs.GetString("PlayerName", "이름없는 용사");
+        for (int i = 0; i < storyLines.Length; i++)
+        {
+            storyLines[i] = storyLines[i].Replace("{{name}}", playerName);
+        }
+
         typingCoroutine = StartCoroutine(TypeStory());
     }
 
@@ -55,7 +63,6 @@ public class StoryTyper : MonoBehaviour
 
     public void LoadGameScene()
     {
-        // 다음 씬으로 넘어가기 (씬 이름 수정!)
-        SceneManager.LoadScene("STAGE1");
+        SceneManager.LoadScene("STAGE1"); // 다음 씬 이름
     }
 }

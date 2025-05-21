@@ -173,7 +173,7 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
         private IEnumerator EndGameWithDelay(float delaySeconds)
         {
             yield return new WaitForSeconds(delaySeconds);
-            SceneManager.LoadScene("GameOver_died");
+            SceneManager.LoadScene("gameover");
         }
     }
 }

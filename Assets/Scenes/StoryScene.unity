@@ -176,10 +176,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: "\uAC74\uB108\uB6F0\uAE30"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5da0e601bc78d4c4584699d4e0691a12, type: 2}
+  m_sharedMaterial: {fileID: -5567026645531354186, guid: 5da0e601bc78d4c4584699d4e0691a12, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -300,8 +300,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyText: {fileID: 2137210183}
-  skipButton: {fileID: 0}
-  storyLines: []
+  skipButton: {fileID: 1926638727}
+  storyLines:
+  - "\uD3C9\uBC94\uD55C \uB300\uD559\uC0DD\uC774\uC5C8\uB358 {{name}}\uC740, \uBC14\uC05C
+    \uD1B5\uD559\uAE38\uC5D0 \uC2E0\uD638\uB97C \uBB34\uC2DC\uD55C \uD2B8\uB7ED\uC5D0
+    \uCE58\uC774\uACE0 \uB9D0\uC558\uB2E4."
+  - "\uC758\uC2DD\uC774 \uD750\uB9BF\uD574\uC838 \uAC00\uB294 \uAC00\uC6B4\uB370,
+    \uC775\uC219\uCE58 \uC54A\uC740 \uD478\uB978 \uD558\uB298\uACFC \uC6C5\uC7A5\uD55C
+    \uC0AC\uC6D0\uC758 \uCC9C\uC7A5\uC774 \uB208\uC5D0 \uB4E4\uC5B4\uC654\uB2E4."
+  - "\uADF8\uB9AC\uACE0 \uADF8 \uC55E\uC5D0 \uD55C \uC874\uC7AC\uAC00 \uC11C \uC788\uC5C8\uB2E4.
+    \uD770 \uB85C\uBE0C\uB97C \uB450\uB978 \uC2E0\uBE44\uD55C \uC778\uC0C1\uC758
+    \uB0A8\uC790."
+  - 
+  - "\uC2E0 : \u201C\uB4DC\uB514\uC5B4 \uAE68\uC5B4\uB0AC\uAD70\uC694. \uC774\uC138\uACC4\uC758
+    \uC6A9\uC0AC {{name}}\uB2D8.\u201D"
+  - "{{name}} : \u201C\u2026\uC5EC\uAE34\u2026 \uC5B4\uB514\uC8E0?\u201D"
+  - "\uC2E0 : \u201C\uB2F9\uC2E0\uC740 \uC8FD\uC5C8\uC2B5\uB2C8\uB2E4. \uD558\uC9C0\uB9CC
+    \uB2E4\uB978 \uCC28\uC6D0\uC758 \uC678\uB300\uC5D0 \uC18C\uD658\uB41C \uAC83\uC774\uC9C0\uC694.
+    \uB2F9\uC2E0\uC5D0\uAC8C \uBD80\uD0C1\uC774 \uC788\uC2B5\uB2C8\uB2E4.\u201D"
+  - "{{name}} : \u201C\uBD80\uD0C1\uC774\uC694?\u201D"
+  - 
+  - "\uC2E0\uC740 \uC7A0\uC2DC \uACE0\uAC1C\uB97C \uC219\uC600\uB2E4. \uADF8\uB9AC\uACE0
+    \uB9D0\uC744 \uC774\uC5C8\uB2E4."
+  - "\uC2E0 : \u201C\uC774 \uC138\uACC4\uB294 \uC778\uACF5\uC9C0\uB2A5\uC758 \uD3ED\uC8FC\uB85C
+    \uBA78\uB9DD \uC9C1\uC804\uC785\uB2C8\uB2E4. \uB2F9\uC2E0\uC758 \uD798\uC73C\uB85C
+    \uAD50\uC218\uB2D8\uB4E4\uC744 \uAD6C\uCD9C\uD558\uACE0, \uC911\uC2EC\uBD80\uC758
+    AI BOO \uBD07\uB97C \uBB3C\uB9AC\uCCD0 \uC774 \uB545\uC744 \uAD6C\uD574\uC8FC\uC2ED\uC2DC\uC624.\u201D"
+  - 
+  - "\uB098\uB294 \uC870\uC6A9\uD788 \uC190\uC744 \uB4E4\uC5B4 \uACE0\uAC1C\uB97C
+    \uB044\uB355\uC600\uB2E4."
+  - "{{name}} : \u201C\uC88B\uC544\uC694. \uD574\uBCFC\uAC8C\uC694. \uB204\uAD70\uAC00\uB294
+    \uD574\uC57C \uD558\uB2C8\uAE4C.\u201D"
+  - 
+  - "\uADF8\uB9AC\uACE0 \uB208\uC744 \uB728\uC790, \uB098\uB294 \uB0AF\uC124\uC9C0\uB9CC
+    \uC775\uC219\uD55C \uAC74\uBB3C \uC55E\uC5D0 \uC11C \uC788\uC5C8\uB2E4."
   typingSpeed: 0.05
 --- !u!1 &1259868952
 GameObject:
@@ -770,6 +802,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052742717}
   m_CullTransparentMesh: 1
+--- !u!1 &2132619363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132619366}
+  - component: {fileID: 2132619365}
+  - component: {fileID: 2132619364}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &2132619364
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132619363}
+  m_Enabled: 1
+--- !u!20 &2132619365
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132619363}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &2132619366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132619363}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 320.3126, y: 194.49008, z: 1.3900096}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2137210181
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,8 +928,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444, y: 18}
-  m_SizeDelta: {x: 482.3689, y: 265.449}
+  m_AnchoredPosition: {x: 0.000011444, y: 13.8887}
+  m_SizeDelta: {x: 482.3689, y: 61.9374}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137210183
 MonoBehaviour:
@@ -827,7 +951,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC904\uAC70\uB9AC \uB123\uAE30 \uC11C\uC0AC \uB2E4"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5da0e601bc78d4c4584699d4e0691a12, type: 2}
   m_sharedMaterial: {fileID: -5567026645531354186, guid: 5da0e601bc78d4c4584699d4e0691a12, type: 2}
@@ -910,6 +1034,7 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2132619366}
   - {fileID: 1572221545}
   - {fileID: 1404643721}
   - {fileID: 733167754}

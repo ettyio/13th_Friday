@@ -16,6 +16,8 @@ using NoSuchCompany.Games.SuperMario.Services;
 using NoSuchCompany.Games.SuperMario.Services.Impl;
 using NoSuchCompany.Games.SuperMario.Services.Jumping;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace NoSuchCompany.Games.SuperMario.Behaviors
 {
@@ -36,7 +38,9 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
         private Vector3 _velocity;
         private float _smoothedVelocityX;
         private bool _isDead;
-        
+        private int _health = 404;
+        private float _deathYThreshold = -10f;
+
         //  Unity properties;
         public Animator animator;
         public SpriteRenderer spriteRenderer;
@@ -55,19 +59,52 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
             _characterBehavior = GetComponent<CharacterBehavior>();
             _jumpController.Initialize(_characterBehavior);
         }
-        
+
         public void Update()
         {
+            if (_isDead)
+                return;
+
             _jumpController.Update(ref _velocity);
-            
+
             if (IsAttacked())
-                DieAsync().FireAndForget();
+            {
+                TakeDamage(100); //적에게 맞으면 체력 100만큼 감소
+            }
+
+            CheckFallDeath();    //위치 기반 사망 확인
+            CheckHealthDeath();  //체력 기반 사망 확인
 
             MovePlayer();
-            
             _jumpController.PostUpdate();
-
             UpdateAnimations();
+        }
+
+        private void CheckFallDeath()
+        {
+            if (transform.position.y < _deathYThreshold)
+            {
+                DieAsync().FireAndForget();
+                EndGame();
+            }
+        }
+
+        private void CheckHealthDeath()
+        {
+            if (_health <= 0)
+            {
+                DieAsync().FireAndForget();
+                EndGame();
+            }
+        }
+
+        public void TakeDamage(int damage)
+        {
+            if (_isDead)
+                return;
+
+            _health -= damage;
+            Debug.Log($"플레이어 피격! 현재 체력: {_health}");
         }
 
         public void OnEnemyAttacked()
@@ -125,6 +162,18 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
                 _characterBehavior.Collisions.LeftCollisions.Any(tag => string.Equals(tag, Tags.Enemy))
                 || _characterBehavior.Collisions.RightCollisions.Any(tag => string.Equals(tag, Tags.Enemy))
                 || _characterBehavior.Collisions.AboveCollisions.Any(tag => string.Equals(tag, Tags.Enemy));
+        }
+
+        private void EndGame()
+        {
+            // 2초 딜레이
+            StartCoroutine(EndGameWithDelay(2f));
+        }
+
+        private IEnumerator EndGameWithDelay(float delaySeconds)
+        {
+            yield return new WaitForSeconds(delaySeconds);
+            SceneManager.LoadScene("GameOver_died");
         }
     }
 }

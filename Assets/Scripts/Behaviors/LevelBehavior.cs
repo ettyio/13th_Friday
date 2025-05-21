@@ -12,6 +12,7 @@ using NoSuchCompany.Games.SuperMario.Diagnostics;
 using NoSuchCompany.Games.SuperMario.Services;
 using NoSuchCompany.Games.SuperMario.Services.Impl;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace NoSuchCompany.Games.SuperMario.Behaviors
 {
@@ -27,12 +28,19 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
         {
             _raycaster = new Raycaster();
         }
-        
+
         public void Start()
         {
-            var boxCollider2D = GetComponent<BoxCollider2D>();
-            
-            _raycaster.Initialize(boxCollider2D, 3);
+            var tilemapCollider2D = GetComponent<TilemapCollider2D>();
+
+            if (tilemapCollider2D != null)
+            {
+                _raycaster.Initialize(tilemapCollider2D, 3);
+            }
+            else
+            {
+                Debug.LogError("TilemapCollider2D not found on this GameObject.");
+            }
         }
 
         public void Update()

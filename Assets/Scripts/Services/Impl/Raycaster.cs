@@ -25,7 +25,7 @@ namespace NoSuchCompany.Games.SuperMario.Services.Impl
         private float _horizontalRaySpacing;
         private float _verticalRaySpacing;
         private const int DefaultRayCount = 2;
-        private BoxCollider2D _boxCollider2D;
+        private Collider2D _collider2D;
         private RaycastOrigins _raycastOrigins;
         
         public ICollisions Collisions => _collisions;
@@ -37,21 +37,21 @@ namespace NoSuchCompany.Games.SuperMario.Services.Impl
             _debugRaycasts = new List<string>();
         }
 
-        public void Initialize(BoxCollider2D boxCollider2D, int rayCounts = DefaultRayCount)
+        public void Initialize(Collider2D collider2D, int rayCounts = DefaultRayCount)
         {
             _horizontalRayCount = _verticalRayCount = rayCounts;
-            
-            _boxCollider2D = boxCollider2D;
-            
+
+            _collider2D = collider2D;
+
             CalculateRaySpacing();
         }
-        
+
         public IEnumerable<IRaycastCollision> FindVerticalHitsOnly(Vector2 objectVelocity, LayerMask collisionMask, float? fixedRayLength = null)
         {
             UpdateRaycastOrigins();
 
             //  Avoid collision with itself during the raycasting phase.
-            _boxCollider2D.enabled = false;
+            _collider2D.enabled = false;
             
             var raycastHits = new HashSet<IRaycastCollision>();
             
@@ -80,7 +80,7 @@ namespace NoSuchCompany.Games.SuperMario.Services.Impl
                 raycastHits.Add(raycastHit);
             }
 
-            _boxCollider2D.enabled = true;
+            _collider2D.enabled = true;
             
             return raycastHits;
         }
@@ -92,13 +92,13 @@ namespace NoSuchCompany.Games.SuperMario.Services.Impl
             _collisions.ResetAll();
             
             //  Avoid collision with itself during the raycast-ing phase.
-            _boxCollider2D.enabled = false;
+            _collider2D.enabled = false;
             
             ProcessHorizontalCollisions(ref objectVelocity, collisionMask);
             
             ProcessVerticalCollisions(ref objectVelocity, collisionMask);
             
-            _boxCollider2D.enabled = true;
+            _collider2D.enabled = true;
         }
         
         private void CalculateRaySpacing()
@@ -124,7 +124,7 @@ namespace NoSuchCompany.Games.SuperMario.Services.Impl
         
         private Bounds GetExpandedBounds()
         {
-            Bounds bounds = _boxCollider2D.bounds;
+            Bounds bounds = _collider2D.bounds;
             bounds.Expand(SkinWidth * -2f);
             
             return bounds;

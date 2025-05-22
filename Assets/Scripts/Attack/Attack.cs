@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Projecttile : MonoBehaviour
+public class Attack : MonoBehaviour
 {
     public float lifeTime = 3f;
     public float damage = 10f;
@@ -12,6 +12,8 @@ public class Projecttile : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("충돌 발생: " + collision.gameObject.name); // 디버깅용
+
         // Boss 태그인지 확인
         if (collision.gameObject.CompareTag("Boss"))
         {
@@ -27,4 +29,13 @@ public class Projecttile : MonoBehaviour
 
         Destroy(gameObject); // 부딪힌 후 파괴
     }
+
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Ground"))
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
+
 }

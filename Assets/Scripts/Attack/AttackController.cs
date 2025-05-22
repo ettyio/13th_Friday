@@ -21,7 +21,13 @@ public class AttackController : MonoBehaviour
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = throwPoint.forward * throwForce;
+            rb.AddForce(throwPoint.forward * throwForce, ForceMode.Impulse);
+
+            // 충돌 감지 모드 설정
+            rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+
+            // 중력 영향 확인
+            rb.useGravity = true;
         }
     }
 }

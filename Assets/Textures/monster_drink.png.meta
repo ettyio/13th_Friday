@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      monster_drink_0: 3718698790440496862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

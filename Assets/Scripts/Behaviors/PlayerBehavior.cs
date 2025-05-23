@@ -183,6 +183,14 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
             else if (currentSceneName == "STAGE2") {
                 SceneManager.LoadScene("gameover2");
             }
+            else if (currentSceneName == "boss_room") {
+                SceneManager.LoadScene("gameover3");
+            }
+            else
+            {
+                SceneManager.LoadScene("TimeOver");
+                Debug.Log("timeover!");
+            }
         }
 
     }

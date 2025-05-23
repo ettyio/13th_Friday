@@ -175,7 +175,15 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
         private IEnumerator EndGameWithDelay(float delaySeconds)
         {
             yield return new WaitForSeconds(delaySeconds);
-            SceneManager.LoadScene("gameover1");
+            string currentSceneName = SceneManager.GetActiveScene().name;
+
+            if (currentSceneName == "STAGE1") {
+                SceneManager.LoadScene("gameover1");
+            }
+            else if (currentSceneName == "STAGE2") {
+                SceneManager.LoadScene("gameover2");
+            }
         }
+
     }
 }

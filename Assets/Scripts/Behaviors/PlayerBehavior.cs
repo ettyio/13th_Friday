@@ -31,6 +31,7 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
         private const float MoveSpeed = 5f;
         private const float AccelerationTimeAirborne = 0.2f;
         private const float AccelerationTimeGrounded = 0.1f;
+        private const float delaySeconds = 2f;
 
         //  Private fields
         private readonly IInputManager _inputManager;
@@ -85,16 +86,17 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
             if (transform.position.y < _deathYThreshold)
             {
                 DieAsync().FireAndForget();
-                EndGame();
+                StartCoroutine(EndGameWithDelay(delaySeconds)); 
             }
         }
+
 
         private void CheckHealthDeath()
         {
             if (_health <= 0)
             {
                 DieAsync().FireAndForget();
-                EndGame();
+                StartCoroutine(EndGameWithDelay(delaySeconds)); 
             }
         }
 
@@ -164,11 +166,11 @@ namespace NoSuchCompany.Games.SuperMario.Behaviors
                 || _characterBehavior.Collisions.AboveCollisions.Any(tag => string.Equals(tag, Tags.Enemy));
         }
 
-        private void EndGame()
-        {
-            // 2√  µÙ∑π¿Ã
-            StartCoroutine(EndGameWithDelay(2f));
-        }
+        //private void EndGame()
+        //{
+        //    // 2√  µÙ∑π¿Ã
+        //    StartCoroutine(EndGameWithDelay(2f));
+        //}
 
         private IEnumerator EndGameWithDelay(float delaySeconds)
         {

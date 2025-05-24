@@ -32,7 +32,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GoombasRun
+  m_Name: bossRun
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1f6a86a663de5485cb43fc7b2995c503, type: 2}
+  m_Motion: {fileID: 7400000, guid: 177ff6cd58bf39e45bdfcc499f5d2985, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -108,7 +108,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Goombas_Idle_0
+  m_Name: Boss_real
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Speed
@@ -143,7 +143,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Goombasldle
+  m_Name: bossIdle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -157,7 +157,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4a82d4f54649548c0a56ca474da9b67b, type: 2}
+  m_Motion: {fileID: 7400000, guid: d058363fda0486e498548b63c90fb34d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -199,7 +199,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GoombasDead
+  m_Name: bossDead
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -212,7 +212,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 10ed9a26aa6454cbb9825416cf3a393e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 681c5e134641d424cb7f9beb04a9c9ce, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

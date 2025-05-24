@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      monster_can_png_0: -4457816710707734991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

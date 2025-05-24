@@ -2583,7 +2583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397297160230662701, guid: 6227befa4b74ae84ea88398110eb22c9, type: 3}
       propertyPath: m_Name
-      value: Goombas Variant (1)
+      value: Boss_BOO
       objectReference: {fileID: 0}
     - target: {fileID: 4397297160230662702, guid: 6227befa4b74ae84ea88398110eb22c9, type: 3}
       propertyPath: m_Controller
